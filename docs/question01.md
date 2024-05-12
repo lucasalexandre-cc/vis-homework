@@ -39,6 +39,9 @@ Existe alguma característica que faz uma música ter mais chance de se tornar p
       ${ vl.render(heatmap(divWidth - 250)) }
     </div>
   </div>
+</div>
+
+<div class="grid grid-cols-2">
   <div class="card grid-colspan-2">
     <h2 class="title">[Gráfico 2] Como a instrumentabilidade influência os streams?</h2>
     <div style="margin-top: 15px;">
