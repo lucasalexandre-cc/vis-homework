@@ -34,7 +34,7 @@ Existe alguma característica que faz uma música ter mais chance de se tornar p
 
 <div class="grid grid-cols-2">
   <div id="width-div" class="card grid-colspan-2">
-    <h2 class="title">[Gráfico 1] Distribuição de streams por características das músicas</h2>
+    <h2 class="title">[Gráfico 1] Distribuição de por características das músicas</h2>
     <div style="margin-top: 15px;">
       ${ vl.render(heatmap(divWidth - 250)) }
     </div>
@@ -43,13 +43,13 @@ Existe alguma característica que faz uma música ter mais chance de se tornar p
 
 <div class="grid grid-cols-2">
   <div class="card grid-colspan-2">
-    <h2 class="title">[Gráfico 2] Como a instrumentabilidade influência os streams?</h2>
+    <h2 class="title">[Gráfico 2] A influência da instrumentabilidade nos streams</h2>
     <div style="margin-top: 15px;">
       ${ vl.render(bar(divWidth - 250)) }
     </div>
   </div>
   <div class="card grid-colspan-2">
-    <h2 class="title">[Gráfico 3] Analisando os batimentos por minuto das musicas</h2>
+    <h2 class="title">[Gráfico 3] Os batimentos por minuto (BPM's) das músicas</h2>
     <div style="margin-top: 15px;">
       ${ vl.render(histogram(divWidth - 250)) }
     </div>
@@ -259,57 +259,53 @@ function histogram(divWidth) {
 }
 ```
 
-## Análise
+## Análises e designs
 
 <div style="width: 100%;">
 
-Analisando o **Gráfico 1**, podemos perceber alguns padrões com relação as características das músicas e como isso impacta sua popularidade.
+Nas próximas linhas serão elucidadas as análises pertinentes aos atributos dos dados, utilizados em cada um dos gráficos acima, que fazem com que uma música tenha mais chance de se tornar popular. Vale ressaltar que em todos os gráficos foi utilizado o atributo streams, em virtude da correlação com as características musicais, quais sejam "Dançabilidade", "Valência", "Energia", "Acústica", "Vivacidade", "Articulação vocal", "BPM" e "Instrumentalidade". Também serão analisados os designs, os marcadores e os canais visuais. 
 
-1. **Acústica:** mais da metade dos streamings são de músicas com acústico na faixa de 0%-20%.
-2. **Articulação vocal:** 87% dos streamings são de músicas com articulação vocal na faixa de 0%-20%.
-3. **Dançabilidade**: a faixa de 40%-80% de dansabilidade parece ser a ideal levando em conta o número de streamings nessa faixa, chegando à 76% dos streamings.
-4. **Energia**: apresenta um comportamento parecido com a "dançabilidade", com 72% dos streamings na faixa de 40%-80%.
-5. **Valência**: aqui já vemos que os streamings se disperçam de forma bem semelhante nas faixas de valência das músicas. Apesar da faixa de 40%-60% ser a mais significativa, está bem próxima das faixas 20%-40% e 60%-80%.
-6. **Vivacidade**: a grande maioria dos streamings são de músicas com vivacidade de 0%-20% (71% dos streamings).
+---
 
-Em caso de dúvidas com relação ao valor exato de cada faixa da característica, basta passar o mouse sobre o quadrante que ele renderizará um tooltip com a informação de quantos % de streamings aquele quadrante possui.
+**Gráfico 1 - Distribuição de streams por características das músicas**
 
-Já com o **Gráfico 2**, podemos analisar unitariamente a instrumentalidade da música e sua relação com os streamings. Mais de 90% do streaming possui instrumentalidade 0.
+Cumpre informar, em princípio, que a escolha do gráfico do tipo heatmap tem como motivo à correlação entres os atributos, padrões e tendências dos dados supramencionados. Por essa razão, é possível depreender informações com relação às características musicais e analisar como a popularidade de cada música é impactada. 
 
-E com relação ao **Gráfico 3**, onde olhamos para BPM's (batimentos por minuto), vemos que as faixas de 80bpm-140bpm concentram a grande maioria dos streamings.
+Segue abaixo uma análise sucinta de como cada atributo musical relaciona-se com a quantidade de stream:
 
-</div>
+1. **Acústica:** mais da metade dos streamings são de músicas com acústico na faixa de 0% a 20%.
+2. **Articulação vocal:** 87% dos streamings são de músicas com articulação vocal na faixa de 0% a 20%.
+3. **Dançabilidade**: a faixa de 40%-80% de "dançabilidade" parece ser a ideal considerando o número de streamings, chegando à 76% dos streamings.
+4. **Energia**: apresenta um comportamento parecido com a "dançabilidade" e possui 72% dos streamings na faixa de 40%-80%.
+5. **Valência**: aqui pode ser notado que os streamings se dispersam de forma bem semelhante nas faixas de valência das músicas. Apesar da faixa de 40%-60% ser a mais significativa, existe a proximidade com as faixas de 20% a 40% e de 60% a 80%.
+6. **Vivacidade**: a grande maioria dos streamings são de músicas com "vivacidade" de 0% a 20% (71% dos streamings).
 
-## Design utilizados
+Com relação ao design do gráfico 1 foram utilizados marcadores do tipo retângulo e canais visuais que representam a porcentagem dos streamings com cores que variam sua tonalidade de acordo com valores mínimos e máximos, posicionados horizontalmente. 
 
-[TODO: falta descrever melhor os marcadores e canais visuais, e essa questão de separabilidade e discriminabilidade. Foquei mais em escrever um racional geral do gráfico]
+Reitera-se que a escolha do heatmap, teve como motivo a possibilidade de analisar, em apenas um gráfico, o impacto de várias características na popularidade da música. Uma vez que os atributos em análise, neste caso, possuem a mesma escala de dados (todos vão de 0% a 100%), a opção do gráfico de heatmap tornou-se viável, o que possibilitou, de foma mais fácil, o agrupamento dos dados.
 
-#### Gráfico 01:
+Vale salientar que em caso de dúvidas com relação ao valor exato de cada faixa da característica, ao passar o mouse sobre o quadrante, será  renderizado um tooltip com a informação de quantos porcentos de streamings aquele quadrante possui.
 
-<div style="width: 100%;">
+---
 
-A escolha do heatmap foi para ser possível analisar em apenas um gráfico o impacto de várias características na popularidade da música. O heatpmap só foi possível de ser usado porque esses atributos possuem a mesma escala de dados (todos vão de 0% a 100%), tornando mais fácil de agrupa-los.
+**Gráfico 2 - A influência da instrumentabilidade nos streams**
 
-O viés que o heatmap pode causar é que ele não deixa claro o valor exato dos streamings para as faixas de atributos. Para mitigar esse efeito, foi implementado um hover no gráfico, onde se passado o mouse é mostrado o valor exato da célula.
+A opção do gráfico de barras, neste caso, permite uma visualização mais palatável, uma vez que os atributos em análise são a instrumentalidade e os streamings. Dessa forma, é possível analisar, unitariamente, a característica musical instrumentalidade e sua correlação com os streamings. Ademais, é possível verificar, de imediato, que mais de 90% dos streamings possui instrumentalidade 0 (zero). 
 
-Outro possível viés é que estou analisando quantidades de streamings de forma geral. Existe uma chance de algumas músicas outliers impactarem fortemente esses atributos, e enviezarem a análise do comportamento geral.
+O outro motivo que ratifica a escolha do gráfico de barras é em virtude da grande maioria das músicas estarem distribuídas em apenas um valor unitário da instrumentabilidade. Comparando-o ao gráfico do tipo heatmap, utilizado acima, esta análise se dificultaria no que tange a identificar a distribuição dos dados, haja vista que praticamente todas as músicas estariam entre os intervalos de 0 (zero) a 20 (vinte). Assim, com um gráfico de barras simples, foi possível visualizar que a maioria das músicas está concentrada na instrumentabilidade 0 (zero).
 
-</div>
+Com relação ao design do gráfico 2 foi utilizado o marcador do tipo barra, com canal visual em posição horizontal, tendo em vista a melhor expressividade e efetividade na representação da comparação com os atributos em questão. 
 
-#### Gráfico 02:
+---
 
-<div style="width: 100%;">
+**Gráfico 3 - Os batimentos por minuto (BPM's) das músicas**
 
-A escolha do gráfico de barras foi tomada porque a grande maioria das músicas estão distribuídas em apenas 1 valor unitário da instrumentabilide. Se fosse adicionado ao heatmap, seria difícil identificar a distribuição dos dados, porque praticamente todas as músicas estariam entre os intervalos 0-20. Com um gráfico de barras simples, foi possível visualizar melhor que a maior parte das músicas está concentrado na instrumentabilidade 0.
+A escolha do gráfico do tipo histograma, nessa comparação, considera a correlação do atributo musical BPM's e a quantidade de streammings. É possível perceber na visualização do gráfico, o destaque concentrado nas faixas de 80bpm a 140bpm em virtude da grande maioria dos streamings. Nessa lógica, no intuito de explicitar somente as quantidades relevantes de BPM, optou-se pela exposição das quantidades de BPM na faixa de 60 a 220. 
 
-</div>
+Outrossim, um possível viés desse gráfico são os valores utilizados para agrupar as músicas no histograma. Intervalos grandes podem omitir uma informação mais precisa com relação a qual faixa de batimentos torna as músicas mais populares, enquanto intervalos pequenos demais podem dificultar a análise dos padrões gerais do atributo.
 
-#### Gráfico 03:
+Vale ressaltar que o gráfico de histograma tem objetivo semelhante ao gráfico heatmap, ou seja, ambos conseguem mostrar a distribuição das músicas a partir de uma escala de valores do atributo. Porém, os BPM's possuem uma escala diferente dos outros atributos, isto é, não está contida no intervalo de valores de 0 a 100. Por isso, foi usado um histograma separado apenas para analisá-lo.
 
-<div style="width: 100%;">
+Com relação ao design do gráfico 3 foi utilizado o marcador do tipo barra, com canal visual em posição vertical, que facilita a comparação numérica entre faixas de valores distintos.
 
-No gráfico responsável por analisar os BPM's, foi escolhido um histograma. O objetivo dele é similar ao heatmap (analisar a distruibuição das músicas a partir de uma escala de valores do atributo). Porém, os BPM'm possuem uma escala diferente dos outros atributos (não está contida no intervalo de 0 a 100). Por isso, foi usado um histograma separado apenas para analisa-lo.
-
-Um possível viés desse gráfico são os valores usados para agrupar as músicas no histograma. Intervalos grandes podem omitir uma informação mais precisa com relação a qual faixa de batimentos tornam as músicas mais populares, enquanto intervalos pequenos demais podem dificultar de analisar padrões gerais do atributo.
-
-</div>
+---

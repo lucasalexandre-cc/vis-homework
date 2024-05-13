@@ -274,13 +274,28 @@ const filteredTop10MusicsHighlightNames = filteredTop10Musics
   .map((m) => m.track_name);
 ```
 
-## Análise
+
+---
+
+## Análises e designs
 
 <div style="width: 100%;">
 
-Analisando os **gráficos 1 e 2**, que dizem respeito aos artistas mais famosos, podemos ver que se considerarmos apenas músicas lançadas em 2023, nenhum artista está no top10 geral. Agora se modificarmos para anos próximos, como 2022, podemos ver que artistas como "Bad Bunny", "Harry Styles", "Taylor Swift" e "The Weeknd" que marcam presença em ambos os top10. É possível fazer a mesma análise para qualquer um dos outros anos.
+Os gráficos acima consideram como os conjuntos das top 10 músicas e dos top 10 artistas variam em suas posições nos diferentes anos. Em todos os gráficos, similiar a questão anterior, foi utilizado o atributo streams, em virtude da correlação com os nomes do artistas e os nomes das faixas musicais. Também serão analisados os designs, os marcadores e os canais visuais.
 
-E com relação aos **gráficos 3 e 4**, eles nos mostram que esse comportamento ocorre de forma semelhante com relação as músicas. Se olharmos apenas as músicas lançadas em 2023, nenhuma delas figura no top10 geral das músicas. Apenas em 2021 é possível ver uma música que figura em ambos os top10 ("STAY (with Justin Bieber)"). Esse comportamento parece fazer sentido, dado que músicas mais antigas estão disponíveis por mais tempo na plataforma e com isso tiveram mais tempo para receber mais streamings.
+</div>
+
+---
+
+## Artistas e Músicas
+
+<div style="width: 100%;">
+
+Ao analisar os **gráficos 1 e 2**, que dizem respeito aos artistas mais famosos, pode-se verificar que se considerarmos apenas músicas lançadas em 2023, nenhum artista está nos Top 10 geral. Agora, ao modificarmos para anos próximos, como por exemplo 2022, podemos verificar que artistas como "Bad Bunny", "Harry Styles", "Taylor Swift" e "The Weekend" permanecem presentes em ambos os Top 10. Além disso, é possível fazer a mesma análise para qualquer um dos outros anos.
+
+Quanto aos **gráficos 3 e 4**, eles nos mostram que esse comportamento ocorre de forma semelhante com relação às músicas. Se olharmos apenas as músicas lançadas em 2023, nenhuma delas é exibida no Top 10 geral das músicas. Vale notar que apenas em 2021 é possível ver uma música que figura em ambos os Top 10, que é a faixa ("STAY (with Justin Bieber)"). Esse comportamento parece fazer sentido, dado que músicas mais antigas estão disponíveis por mais tempo na plataforma e com isso, tiveram mais tempo para receber mais streamings.
+
+--- 
 
 </div>
 
