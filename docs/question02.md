@@ -281,7 +281,7 @@ const filteredTop10MusicsHighlightNames = filteredTop10Musics
 
 <div style="width: 100%;">
 
-Os gráficos acima consideram como os conjuntos das top 10 músicas e dos top 10 artistas variam em suas posições nos diferentes anos. Em todos os gráficos, similiar a questão anterior, foi utilizado o atributo streams, em virtude da correlação com os nomes do artistas e os nomes das faixas musicais. Também serão analisados os designs, os marcadores e os canais visuais.
+Os gráficos acima consideram como os conjuntos das top 10 músicas e dos top 10 artistas variam em suas posições nos diferentes anos. Em todos os gráficos, similar a questão anterior, foi utilizado o atributo streams, em virtude da correlação com os nomes dos artistas e os nomes das faixas musicais. Nas próximas linhas também serão analisados os designs, os marcadores e os canais visuais.
 
 </div>
 
@@ -291,9 +291,14 @@ Os gráficos acima consideram como os conjuntos das top 10 músicas e dos top 10
 
 <div style="width: 100%;">
 
-Ao analisar os **gráficos 1 e 2**, que dizem respeito aos artistas mais famosos, pode-se verificar que se considerarmos apenas músicas lançadas em 2023, nenhum artista está nos Top 10 geral. Agora, ao modificarmos para anos próximos, como por exemplo 2022, podemos verificar que artistas como "Bad Bunny", "Harry Styles", "Taylor Swift" e "The Weekend" permanecem presentes em ambos os Top 10. Além disso, é possível fazer a mesma análise para qualquer um dos outros anos.
+**Gráficos 1 e 2:**
 
-Quanto aos **gráficos 3 e 4**, eles nos mostram que esse comportamento ocorre de forma semelhante com relação às músicas. Se olharmos apenas as músicas lançadas em 2023, nenhuma delas é exibida no Top 10 geral das músicas. Vale notar que apenas em 2021 é possível ver uma música que figura em ambos os Top 10, que é a faixa ("STAY (with Justin Bieber)"). Esse comportamento parece fazer sentido, dado que músicas mais antigas estão disponíveis por mais tempo na plataforma e com isso, tiveram mais tempo para receber mais streamings.
+Ao analisar os **gráficos 1 e 2**, que dizem respeito aos artistas mais famosos, pode-se verificar que se considerarmos apenas músicas lançadas em 2023, nenhum artista está nos Top 10 geral. Agora, ao modificarmos para anos próximos, como, por exemplo, 2022, podemos verificar que artistas como "Bad Bunny", "Harry Styles", "Taylor Swift" e "The Weekend" permanecem presentes em ambos os Top 10. Além disso, é possível fazer a mesma análise para qualquer um dos outros anos.
+
+**Gráficos 3 e 4:**
+
+Quanto aos **gráficos 3 e 4**, eles nos mostram que esse comportamento ocorre de forma semelhante com relação às músicas. Se olharmos apenas as músicas lançadas em 2023, nenhuma delas é exibida no Top 10 geral das músicas. Vale notar que apenas em 2021 é possível ver uma música que figura em ambos os Top 10, que é a faixa ("STAY (with Justin Bieber)"). Esse comportamento parece fazer sentido, dado que músicas mais antigas estão disponíveis por mais tempo na plataforma e com isso, tiveram mais tempo para receber mais streaming.
+
 
 --- 
 
@@ -301,23 +306,18 @@ Quanto aos **gráficos 3 e 4**, eles nos mostram que esse comportamento ocorre d
 
 ## Design utilizados
 
-[TODO: falta descrever melhor os marcadores e canais visuais, e essa questão de separabilidade e discriminabilidade. Foquei mais em escrever um racional geral do gráfico]
-
-#### Gráficos 01 e 03:
 
 <div style="width: 100%;">
 
-Escolhi um gráfico de barras ordenado comum para mostrar os top10 artistas e as top10 músicas. Ele mostra de um jeito prático e direto a informação necessária para análise. Na escala, foi colocado o número de streamings, para ficar mais fácil comparar posteriormente os gráficos 01 e 03 com o 02 e 04.
+De modo geral, todos os gráficos desta questão são do tipo gráfico de barras ordenados e em posição horizontal, em virtude da melhor visualização, tendo em vista a representação das top 10 músicas e dos top 10 artistas. Tais gráficos conseguem elucidar de forma prática, direta e imediata as informações correlacionadas na análise. Assim, no intuito de facilitar as comparações entre os gráfico 01 e 03 com os gráficos 02 e 04, na escala foi utilizado o número de streaming.    
+
+No entanto, vale ressaltar que existem diferenças, por ocasião da visualização, na comparação entre os gráficos 02 e 04 e os gráficos 01 e 03. São elas:
+
+- Escalas: Assumimos que os gráficos 01 e 03 foram origem para confecção dos gráficos descendentes 02 e 04, respectivamente. Assim, a escalada do gráfico 02 se manteve igual a do 01, bem como a do gráfico 04, mante-se igual a do 03. Isso foi proposital, para ser mais fácil comparar as quantidades de streaming entre eles.
+
+- Cores: as barras dos gráficos descendentes, apresentam, por padrão, uma cor mais clara que as dos gráficos dos quais se originam. Porém, quando uma música ou um artista aparece em ambos os gráficos, ele assume uma cor idêntica à origem. Por exemplo, nos gráficos relacionados aos artistas, ao selecionar o ano de lançamento ("Ano lançamento") em "2022", pode-se perceber que os artistas "Bad Bunny", "Harry Styles" e "Taylor Swift" diferenciam-se dos demais, mudando sua tonalidade de cor. O mesmo ocorre no gráfico relacionado às músicas. Tal efeito no canal visual foi proposital, com intuito de destacar as músicas/artistas que se repetem.
+
 
 </div>
 
-#### Gráficos 02 e 04:
-
-<div style="width: 100%;">
-
-Foi escolhido um gráfico de barra, assim como os gráficos 01 e 03, porém com algumas diferenças:
-
-- Escala: a escalada do gráfico 02 se manteve igual à do gráfico 01, assim como a do gráfico 04 se manteve igual ao gráfico 03. Isso foi proposital, para ser mais fácil comparar a quantidade de streamings entre os gráficos.
-- Cor: as barras desses gráficos apresentam por default uma cor mais clara que as dos gráficos "pais". Porém, quando uma música ou um artista aparece em ambos os gráficos, ele assume uma cor idêntica ao gráfico "pai". Isso foi proposital para que fosse mais fácil entender quando as músicas/artistas se repetiam entre os gráficos.
-
-</div>
+---
