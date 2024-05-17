@@ -38,7 +38,7 @@ Discuta as diferenças entre as plataformas (Spotify, Deezer, Apple Music e Shaz
     </div>
   </div>
   <div class="card grid-colspan-1">
-    <h2 class="title">[Gráfico 1.12] Distribuição dos charts</h2>  
+    <h2 class="title">[Gráfico 1.2] Distribuição dos charts</h2>  
     <div style="margin-top: 15px;">
       ${ vl.render(barChart(divWidth - 250, charts, "Total Charts")) }
     </div>
@@ -248,29 +248,31 @@ function groupBarChart(divWidth, data, xLabel) {
 ```
 
 ---
+
 ## Análises e designs
 
 <div style="width: 100%;">
 
-Nesta questão, serão discutidas as diferenças entre as quantidades de playlistas das plataformas, assim como distribuições das paradas musicais (charts). Os atributos analisados foram as maiores quantidades de músicas e artistas inseridos nas playlists e nas paradas musicais de cada aplicativo. 
+Nesta questão, serão discutidas as diferenças entre as quantidades de playlistas das plataformas, assim como distribuições das paradas musicais (charts). Os atributos analisados foram as maiores quantidades de músicas e artistas inseridos nas playlists e nas paradas musicais de cada aplicativo.
 
 ---
-**Gráficos 1 e 1.12**
+
+**Gráficos 1 e 1.2**
 
 Em princípio, por estarem sendo tratados atributos quantitativos ordenáveis, a escolha do gráfico de barras horizontais adequou-se melhor a distribuição dos dados analisados. Além disso, nesse contexto, a fim de facilitar a comparação visual dos tamanhos de cada playlist, optamos pela diferenciação em cores, uma vez que estão sendo analisadas plataformas diferentes. Dessa forma, a utilização das colorações distintas ressalta aos olhos e destaca que as playlists do Spotify têm preferência massiva em relação as dos demais aplicativos. Por outro lado, a utilização das playlists no Deezer e a na Apple Music têm quantidades similares. O Shazam por ser um aplicativo com apelo distinto às demais plataformas, tem quantidade irrelevante em playlists.
 
 Quanto ao gráfico de distribuição das paradas musicais, foi utilizado o mesmo padrão para codificação visual e para marcadores. Novamente, a distinção por cores ressalta as diferenças entre os dados analisados. Nesse caso, portanto, é perceptível um maior destaque das plataformas Apple e Shazam, em detrimento dos aplicativos com maiores quantidades de playlists.
 
 A conclusão, portanto, é que a plataforma Spotify possui maior quantidade de playlist usufruídas pelos seus assinantes, seguido do Deezer e Apple Music. Enquanto os aplicativos Deezer e Shazam têm as maiores paradas musicais.
-  
 
 ---
+
 **Gráficos 2**
 
-No gráfico 2, foram selecionadas as top 5 músicas, tendo em vista suas quantidades de streams e é feita a comparação de como estas faixas músicas não somente aparecem nas paradas das plataformas, como também nas playlists. 
+No gráfico 2, foram selecionadas as top 5 músicas, tendo em vista suas quantidades de streams e é feita a comparação de como estas faixas músicas não somente aparecem nas paradas das plataformas, como também nas playlists.
 
-Os mesmos critérios visuais como o gráfico de barras horizontal ordenado e a distinção de cores  utilizados em relação aos atributos de diferentes plataformas foi utilizado. 
+Os mesmos critérios visuais como o gráfico de barras horizontal ordenado e a distinção de cores utilizados em relação aos atributos de diferentes plataformas foi utilizado.
 
-A principal perceção é que a plataforma Spotify é a única que contém todas faixas musicais em suas playlists. 
+A principal perceção é que a plataforma Spotify é a única que contém todas faixas musicais em suas playlists.
 
 ---
